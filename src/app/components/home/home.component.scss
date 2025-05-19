@@ -68,6 +68,113 @@ main{
 }
 
 
+.final-cta-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #ffffff; /* Fundo branco */
+  text-align: center;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000; /* Texto preto */
+    margin-bottom: 30px;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  app-btn-primary {
+    button {
+      background-color: #6b48ff; /* Roxo escuro, ajuste conforme necessário */
+      color: #ffffff;
+      padding: 15px 30px;
+      border-radius: 50px; /* Bordas arredondadas */
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: lowercase; /* Mantém o texto como está no design */
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #5a3de6; /* Um tom mais escuro ao passar o mouse */
+      }
+
+      &:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #ffffff; /* Fundo branco */
+  border-top: 1px solid #e0e0e0; /* Linha sutil no topo, opcional */
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+
+    .logo {
+      font-size: 18px;
+      font-weight: 600;
+      color: #000000;
+
+      /* Se você usar uma imagem para o logo, ajuste assim: */
+      img {
+        height: 170px; /* Ajuste conforme o tamanho do seu logo */
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        background-color: #000000; /* Fundo preto para os ícones */
+        border-radius: 50%; /* Círculo */
+        transition: background-color 0.3s;
+
+        img {
+          width: 16px;
+          height: 16px;
+          filter: invert(1); /* Inverte a cor para branco, se o ícone for preto */
+        }
+
+        &:hover {
+          background-color: #6b48ff; /* Roxo ao passar o mouse */
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  }
+}
+
 @media (min-width: 1080px) {
     .main-section{
         flex-direction: row;
@@ -77,3 +184,4 @@ main{
     }
     
 }
+

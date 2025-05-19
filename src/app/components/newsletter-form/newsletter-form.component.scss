@@ -1,0 +1,70 @@
+@import "../../../color-variables.scss";
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $secondary-color;
+  padding: 40px 70px;
+
+  h3 {
+    font-size: 36px;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+  }
+
+  .text {
+    flex: 1;
+  }
+
+  form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    color: white;
+  }
+
+  input {
+    background: none;
+    border: none;
+    width: 100%;
+    border-bottom: 2px solid white;
+    height: 60px;
+    margin-bottom: 40px;
+    color: white; /* Cor do texto digitado */
+    caret-color: white; /* Cor do cursor (opcional, para consistência) */
+
+    /* Garante que o texto digitado seja branco mesmo com estilos padrão do navegador */
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-text-fill-color: white; /* Corrige cor do texto em campos de preenchimento automático */
+      background: none;
+      transition: background-color 5000s ease-in-out 0s; /* Evita fundo indesejado */
+    }
+  }
+
+  input:focus {
+    outline: none; 
+  }
+}
+
+@media (min-width: 1080px) {
+  .form-section {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 115px;
+    padding: 40px 120px;
+  }
+}
